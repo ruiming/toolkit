@@ -1,0 +1,32 @@
+{
+  "name": "toolkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ruiming <ruiming.zhuang@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "precommit": "npm run lint",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg"
+  },
+  "dependencies": {
+    "glob": "^7.1.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "husky": "^0.13.3",
+    "validate-commit-msg": "^2.12.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
