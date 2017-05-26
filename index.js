@@ -1,3 +1,5 @@
 const requireDirectory = require('./lib/require-directory')
 
-console.log(requireDirectory('./lib/**/*.js'))
+const { lib } = requireDirectory('./lib/**/*.js')
+
+module.exports = lib
