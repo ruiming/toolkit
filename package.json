@@ -11,6 +11,7 @@
     "commitmsg": "validate-commit-msg"
   },
   "dependencies": {
+    "callsite": "^1.0.0",
     "glob": "^7.1.2",
     "path": "^0.12.7"
   },
