@@ -13,6 +13,7 @@
   "dependencies": {
     "callsite": "^1.0.0",
     "glob": "^7.1.2",
+    "humps": "^2.0.0",
     "path": "^0.12.7"
   },
   "devDependencies": {

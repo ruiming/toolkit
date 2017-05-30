@@ -1,5 +1,6 @@
+const humps = require('humps')
 const requireDirectory = require('./lib/require-directory')
 
-const { lib } = requireDirectory('./lib/**/*.js')
+const { lib } = humps.camelizeKeys(requireDirectory('./lib/**/*.js'))
 
 module.exports = lib
