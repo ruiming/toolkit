@@ -15,19 +15,7 @@
      { '0': 2, '1': 5 } ]
    ```
 
-2. cut
-
-   删除数组中的某一项
-
-   ```javascript
-   const { cut } = require('./lib/toolkit')
-   const arr = [0, 1, 2, 3, 4, 5]
-   console.log(cut(arr, 2))
-   // output:
-   [0, 1, 3, 4, 5]
-   ```
-
-3. require-directory
+2. require-directory
 
    递归加载模块
 
@@ -42,7 +30,7 @@
      'require-directory': [Function] }
    ```
 
-4. iota
+3. iota
 
   类似 Go 中的 iota
 
