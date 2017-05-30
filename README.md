@@ -42,6 +42,7 @@
      'require-directory': [Function] }
    ```
 
-4. callsite
+4. iota
 
-   获取函数执行时的调用栈
+  类似 Go 中的 iota
+
