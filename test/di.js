@@ -26,7 +26,7 @@ describe('Test di', () => {
     di.container.set('test2', 123)
     assert.equal(di.container.get('test2'), 123)
   })
-  it.only('Test inject', async () => {
+  it('Test inject', async () => {
     di.container.set('test1', 111)
     di.container.set('test2', 123)
     class Test1 {
@@ -36,18 +36,12 @@ describe('Test di', () => {
       echo () {
         return this.test3
       }
-      echo2 (test1, xxx, test2) {
-        console.log(test1, xxx)
-        return test1 + xxx + test2
-      }
     }
-    const test1 = new Test1()
     const Test2 = di.inject('test1', 'test2')(Test1, undefined, undefined)
     const test2 = new Test2()
     assert.equal(test2.echo(), 234)
     const Test3 = di.inject()(Test1, undefined, undefined)
     const test3 = new Test3()
     assert.equal(test3.echo(), 234)
-    assert.equal(test1.echo2(1), 235)
   })
 })
