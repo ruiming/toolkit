@@ -1,9 +1,9 @@
-const callerCallsite = require('callsite')
+import * as callerCallsite from 'callsite'
 
 let base = 0
-let preContext = null
+let preContext: string
 
-module.exports = function (start) {
+function iota (start?: number) {
   if (callerCallsite()[1].getMethodName() !== preContext) {
     preContext = callerCallsite()[1].getMethodName()
     base = 0
@@ -13,3 +13,5 @@ module.exports = function (start) {
   }
   return base++
 }
+
+export = iota

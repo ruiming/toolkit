@@ -1,16 +1,14 @@
-const path = require('path')
-const glob = require('glob')
-const humps = require('humps')
+import * as glob from 'glob'
+import * as humps from 'humps'
+import * as path from 'path'
 
-const _cacheModuleList = new Map()
+const _cacheModuleList = new Map<string, any>()
 
-/**
- * 递归解析路径 src 下的所有模块
- * @param {String} src
- * @param {Object} options { esm, construct }
- * src 格式同 glob
- */
-module.exports = function (src, options = {}) {
+function requireDirectory (src: string, options?: {
+  root?: string
+  esm?: boolean
+  construct?: boolean
+}) {
   if (_cacheModuleList.has(src)) {
     return _cacheModuleList.get(src)
   }
@@ -24,8 +22,8 @@ module.exports = function (src, options = {}) {
       return pre
     }
     if (/\.js/.test(next)) {
-      const pkg = options.esm ? require(path.join(fromSrc, items.join(path.sep))).default : require(path.join(fromSrc, items.join(path.sep)))
-      // eslint-disable-next-line
+      const pkg = options.esm ? require(path.join(fromSrc, items.join(path.sep))).default
+        : require(path.join(fromSrc, items.join(path.sep)))
       pre[humps.camelize(path.basename(next, '.js'))] = options.construct ? new pkg() : pkg
     } else {
       pre[next] = pre[next] || {}
@@ -35,3 +33,5 @@ module.exports = function (src, options = {}) {
   _cacheModuleList.set(src, moduleList)
   return moduleList
 }
+
+export = requireDirectory

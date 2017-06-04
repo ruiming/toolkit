@@ -5,7 +5,7 @@
 
    ```javascript
    const { arrange } = require('./lib/toolkit')
-   console.log(arrange[[1, 2,], [3, 4, 5]])
+   console.log(arrange[[1, 2], [3, 4, 5]])
    // output:
    [ { '0': 1, '1': 3 },
      { '0': 1, '1': 4 },
