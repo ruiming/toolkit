@@ -14,4 +14,7 @@ function iota (start?: number) {
   return base++
 }
 
-export = iota
+export {
+  iota as default,
+  iota
+}

@@ -1,2 +1,2 @@
 declare function iota(start?: number): number;
-export = iota;
+export { iota as default, iota };

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const callerCallsite = require("callsite");
 let base = 0;
 let preContext;
@@ -12,5 +13,6 @@ function iota(start) {
     }
     return base++;
 }
-module.exports = iota;
+exports.default = iota;
+exports.iota = iota;
 //# sourceMappingURL=iota.js.map

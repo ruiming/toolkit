@@ -19,4 +19,7 @@ function arrange (routes: number[][], index = 0): number[][] {
   return items
 }
 
-export = arrange
+export {
+  arrange as default,
+  arrange
+}

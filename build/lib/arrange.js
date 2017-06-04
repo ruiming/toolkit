@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 全排列二维数组
  * @param routes 二维数组
@@ -20,5 +21,6 @@ function arrange(routes, index = 0) {
     }
     return items;
 }
-module.exports = arrange;
+exports.default = arrange;
+exports.arrange = arrange;
 //# sourceMappingURL=arrange.js.map

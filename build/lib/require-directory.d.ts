@@ -3,4 +3,4 @@ declare function requireDirectory(src: string, options?: {
     esm?: boolean;
     construct?: boolean;
 }): any;
-export = requireDirectory;
+export { requireDirectory as default, requireDirectory };

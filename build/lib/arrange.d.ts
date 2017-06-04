@@ -4,4 +4,4 @@
  * @param index
  */
 declare function arrange(routes: number[][], index?: number): number[][];
-export = arrange;
+export { arrange as default, arrange };

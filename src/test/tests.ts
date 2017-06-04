@@ -1,10 +1,10 @@
 import { assert } from 'chai'
 import { suite, test } from 'mocha-typescript'
 import * as path from 'path'
-import arrange = require('../lib/arrange')
-import di = require('../lib/di')
-import iota = require('../lib/iota')
-import requireDirectory = require('../lib/require-directory')
+import arrange from '../lib/arrange'
+import * as di from '../lib/di'
+import iota from '../lib/iota'
+import requireDirectory from '../lib/require-directory'
 
 @suite class Arrange {
   @test test1 () {

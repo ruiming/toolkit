@@ -34,4 +34,7 @@ function requireDirectory (src: string, options?: {
   return moduleList
 }
 
-export = requireDirectory
+export {
+  requireDirectory as default,
+  requireDirectory
+}

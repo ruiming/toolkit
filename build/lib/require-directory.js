@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const glob = require("glob");
 const humps = require("humps");
 const path = require("path");
@@ -29,5 +30,6 @@ function requireDirectory(src, options) {
     _cacheModuleList.set(src, moduleList);
     return moduleList;
 }
-module.exports = requireDirectory;
+exports.default = requireDirectory;
+exports.requireDirectory = requireDirectory;
 //# sourceMappingURL=require-directory.js.map
